@@ -8,3 +8,6 @@
   - name: Load configuration
     include_role:
       name: ekara.configuration
+
+  - test_file: 
+    - local_action: copy content="key1: val1" dest={{ output_dir }}/output.yaml
