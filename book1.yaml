@@ -10,4 +10,4 @@
       name: ekara.configuration
 
   - name: Test file 
-    - local_action: copy content={{ input_dir }} dest={{ output_dir }}/output.yaml
+    local_action: copy content={{ input_dir }} dest={{ output_dir }}/output.yaml
