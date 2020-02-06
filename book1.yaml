@@ -1,6 +1,12 @@
 ---
 - hosts: localhost
   gather_facts: false
+  
+  vars:
+    content:
+      key1: value1
+      key2: value2
+  
   pre_tasks:
   - name: Checkout roles
     command: ansible-galaxy install -r requirements.yaml
@@ -10,4 +16,4 @@
       name: ekara.configuration
 
   - name: Test file 
-    local_action: copy content={{ input_dir }} dest={{ output_dir }}/output.yaml
+    local_action: copy content={{ content }} dest={{ output_dir }}/output.yaml
