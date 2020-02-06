@@ -7,9 +7,9 @@
       key1: value1
       key2: value2
       key3:
-        value3_key1; value3_value1
-        value3_key2; value3_value2
-        value3_key3; value3_value3
+        value3_key1: value3_value1
+        value3_key2: value3_value2
+        value3_key3: value3_value3
   
   pre_tasks:
   - name: Checkout roles
