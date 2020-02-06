@@ -16,4 +16,4 @@
       name: ekara.configuration
 
   - name: Test file 
-    local_action: copy content={{ content }} dest={{ output_dir }}/output.yaml
+    local_action: copy content={{ content | to_yaml }} dest={{ output_dir }}/output.yaml
