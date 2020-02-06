@@ -9,5 +9,5 @@
     include_role:
       name: ekara.configuration
 
-  - test_file: 
+  - name: Test file 
     - local_action: copy content={{ input_dir }} dest={{ output_dir }}/output.yaml
