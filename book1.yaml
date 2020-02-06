@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: false
+  pre_tasks:
+  - name: Checkout roles
+    command: ansible-galaxy install -r requirements.yaml
+  tasks:
+  - name: Load configuration
+    include_role:
+      name: ekara.configuration
