@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  gather_facts: false
+  
+  vars:
+    content:
+      key13: value1Hook3
+  
+  pre_tasks:
+  - name: Checkout roles
+    command: ansible-galaxy install -r requirements.yaml
+  tasks:
+  - name: Load configuration
+    include_role:
+      name: ekara.configuration
+
+  - name: Test file 
+    local_action: copy content={{ content | to_nice_yaml( width=50, explicit_start=True, explicit_end=True) }} dest={{ output_dir }}/output.yaml
