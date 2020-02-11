@@ -4,7 +4,7 @@
   
   vars:
     content:
-      key1: value1Hook2
+      key12: value1Hook2
   
   pre_tasks:
   - name: Checkout roles
